@@ -1,0 +1,35 @@
+public class Removeduplicates {
+
+	public static void main(String[] args) {
+		int count=0;
+		char c = 0;
+		Map <Integer,Character>m=new LinkedHashMap<Integer,Character>();
+		m.put(1,'p');
+		m.put(2, 'a');
+		m.put(3,'y' );
+		m.put(4,'i' );
+		m.put(5,'l' );
+		m.put(6,'a' );
+		m.put(7,'g' );
+		m.put(8,'a' );
+		m.put(9, 'm');
+		Set s=m.entrySet();
+		Iterator itr=s.iterator();
+		int sum=0;
+		while(itr.hasNext()) {
+			Map.Entry <Integer,Character>e=(Map.Entry)itr.next();
+			if(e.getValue().equals('a')) {
+				count++;
+				 sum=sum+count;
+				count=0;
+				 c=e.getValue();
+
+				
+			}
+		}
+		System.out.println("the repeated duplicte value and the occurrence---->"+sum+"&&"+c);
+
+		
+	}
+
+}
